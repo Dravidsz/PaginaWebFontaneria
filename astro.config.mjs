@@ -3,5 +3,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://plomerias-panama.com',
+  site: 'https://dravidsz.github.io',
+  base: '/PaginaWebFontaneria',
 });
