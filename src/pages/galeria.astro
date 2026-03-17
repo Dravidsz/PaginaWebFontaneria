@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+// Gallery items with placeholder data
+const galleryItems = [
+  {
+    id: 1,
+    title: "Remodelación de Baño Completo",
+    category: "Remodelación",
+    description: "Instalación completa de sanitarios y grifería moderna"
+  },
+  {
+    id: 2,
+    title: "Instalación de Sistema de Agua",
+    category: "Instalación",
+    description: "Sistema de tuberías nuevo para edificio residencial"
+  },
+  {
+    id: 3,
+    title: "Reparación de Fuga Principal",
+    category: "Reparación",
+    description: "Detección y reparación de fuga en tubería principal"
+  },
+  {
+    id: 4,
+    title: "Instalación de Calentador Solar",
+    category: "Calentadores",
+    description: "Sistema de agua caliente ecológico y eficiente"
+  },
+  {
+    id: 5,
+    title: "Destape de Drenaje Industrial",
+    category: "Destape",
+    description: "Limpieza profesional con equipo de hidrolavado"
+  },
+  {
+    id: 6,
+    title: "Grifería de Cocina Premium",
+    category: "Grifería",
+    description: "Instalación de grifería de alta gama"
+  },
+  {
+    id: 7,
+    title: "Baño de Lujo Residencial",
+    category: "Remodelación",
+    description: "Proyecto completo con acabados de primera"
+  },
+  {
+    id: 8,
+    title: "Sistema de Drenaje",
+    category: "Instalación",
+    description: "Instalación de sistema de drenaje para patio"
+  },
+  {
+    id: 9,
+    title: "Mantenimiento Preventivo",
+    category: "Mantenimiento",
+    description: "Revisión y mantenimiento de sistema de plomería"
+  }
+];
+
+const categories = ["Todos", "Remodelación", "Instalación", "Reparación", "Calentadores", "Destape", "Grifería", "Mantenimiento"];
+---
+
+<Layout title="Galería de Trabajos | Plomerías Panamá">
+  <Header />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Galería de Trabajos</h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+          Vea ejemplos de nuestros proyectos completados. Calidad que habla por sí misma.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category, index) => (
+            <button 
+              class={`px-5 py-2 rounded-full font-medium transition-all duration-300 filter-btn ${
+                index === 0 
+                  ? 'bg-primary-800 text-white' 
+                  : 'bg-white text-gray-700 hover:bg-primary-100 hover:text-primary-800'
+              }`}
+              data-category={category}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+          {galleryItems.map((item) => (
+            <div 
+              class="gallery-item group cursor-pointer" 
+              data-category={item.category}
+            >
+              <div class="relative overflow-hidden rounded-xl shadow-lg">
+                <!-- Placeholder Image -->
+                <div class="aspect-[4/3] bg-gradient-to-br from-primary-200 to-primary-300 flex items-center justify-center">
+                  <div class="text-center p-6">
+                    <svg class="w-16 h-16 text-primary-800/40 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="text-primary-800/60 font-medium">Imagen del proyecto</span>
+                  </div>
+                </div>
+                
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div class="p-6 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <span class="inline-block bg-accent-500 text-white text-sm font-medium px-3 py-1 rounded-full mb-2">
+                      {item.category}
+                    </span>
+                    <h3 class="text-xl font-bold text-white mb-1">{item.title}</h3>
+                    <p class="text-gray-200 text-sm">{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Empty State (hidden by default) -->
+        <div id="empty-state" class="hidden text-center py-12">
+          <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <p class="text-gray-600 text-lg">No hay proyectos en esta categoría.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          ¿Le Gustaría un Resultado Similar?
+        </h2>
+        <p class="text-gray-600 mb-8 max-w-xl mx-auto">
+          Contáctenos para discutir su proyecto. Le ayudamos a hacer realidad sus ideas.
+        </p>
+        <a href="/contacto" class="btn-primary">
+          Solicitar Cotización
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+<script>
+  // Gallery filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const emptyState = document.getElementById('empty-state');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+      
+      // Update active button
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-primary-800', 'text-white');
+        btn.classList.add('bg-white', 'text-gray-700');
+      });
+      button.classList.remove('bg-white', 'text-gray-700');
+      button.classList.add('bg-primary-800', 'text-white');
+      
+      // Filter items
+      let visibleCount = 0;
+      galleryItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'Todos' || itemCategory === category) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      
+      // Show/hide empty state
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.classList.remove('hidden');
+        } else {
+          emptyState.classList.add('hidden');
+        }
+      }
+    });
+  });
+</script>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "reparacion-fugas",
+    "title": "Reparación de Fugas",
+    "shortDescription": "Detectamos y reparamos fugas de agua en tuberías, llaves y conexiones.",
+    "description": "Servicio especializado en la detección y reparación de fugas de agua. Utilizamos tecnología moderna para localizar fugas ocultas sin dañar sus instalaciones. Reparamos fugas en tuberías, llaves, válvulas y conexiones de todo tipo.",
+    "icon": "droplet",
+    "features": [
+      "Detección de fugas ocultas",
+      "Reparación sin demolición",
+      "Garantía en todos los trabajos",
+      "Servicio de emergencia disponible"
+    ],
+    "image": "/images/services/fugas.jpg"
+  },
+  {
+    "id": "instalacion-tuberias",
+    "title": "Instalación de Tuberías",
+    "shortDescription": "Instalación profesional de sistemas de tuberías para agua potable y desagüe.",
+    "description": "Realizamos instalación completa de sistemas de tuberías para construcciones nuevas y remodelaciones. Trabajamos con PVC, cobre, CPVC y otros materiales de alta calidad para garantizar durabilidad.",
+    "icon": "pipe",
+    "features": [
+      "Tuberías de agua potable",
+      "Sistemas de desagüe",
+      "Conexiones de gas",
+      "Materiales de primera calidad"
+    ],
+    "image": "/images/services/tuberias.jpg"
+  },
+  {
+    "id": "destape-canerias",
+    "title": "Destape de Cañerías",
+    "shortDescription": "Limpieza y destape de drenajes obstruidos con equipos profesionales.",
+    "description": "Servicio de destape y limpieza de cañerías utilizando equipos profesionales. Desobstruimos lavamanos, inodoros, duchas, desagües de piso y tuberías principales con máquinas eléctricas y sistemas de hidrolavado.",
+    "icon": "wrench",
+    "features": [
+      "Destape con máquina eléctrica",
+      "Hidrolavado de tuberías",
+      "Inspección con cámara",
+      "Limpieza preventiva"
+    ],
+    "image": "/images/services/destape.jpg"
+  },
+  {
+    "id": "calentadores-agua",
+    "title": "Calentadores de Agua",
+    "shortDescription": "Instalación, mantenimiento y reparación de calentadores de agua.",
+    "description": "Expertos en instalación y reparación de calentadores de agua eléctricos, de gas y solares. Ofrecemos mantenimiento preventivo para extender la vida útil de su equipo y garantizar su funcionamiento óptimo.",
+    "icon": "flame",
+    "features": [
+      "Calentadores eléctricos",
+      "Calentadores de gas",
+      "Calentadores solares",
+      "Mantenimiento preventivo"
+    ],
+    "image": "/images/services/calentadores.jpg"
+  },
+  {
+    "id": "remodelacion-banos",
+    "title": "Remodelación de Baños",
+    "shortDescription": "Remodelación completa de baños con instalaciones de plomería.",
+    "description": "Servicio integral de remodelación de baños que incluye toda la plomería necesaria. Instalamos inodoros, lavamanos, duchas, tinas, bidets y todos los accesorios. Trabajamos en coordinación con otros contratistas para resultados perfectos.",
+    "icon": "bath",
+    "features": [
+      "Instalación de sanitarios",
+      "Duchas y tinas",
+      "Muebles de baño",
+      "Acabados de lujo"
+    ],
+    "image": "/images/services/banos.jpg"
+  },
+  {
+    "id": "instalacion-griferia",
+    "title": "Instalación de Grifería",
+    "shortDescription": "Instalación y reparación de llaves, grifos y válvulas de todo tipo.",
+    "description": "Instalamos y reparamos todo tipo de grifería: llaves de lavamanos, grifos de cocina, llaves de paso, válvulas de control y más. Trabajamos con todas las marcas y estilos, desde lo más básico hasta grifería de lujo.",
+    "icon": "faucet",
+    "features": [
+      "Grifería de cocina",
+      "Grifería de baño",
+      "Llaves de paso",
+      "Válvulas y accesorios"
+    ],
+    "image": "/images/services/griferia.jpg"
+  }
+]

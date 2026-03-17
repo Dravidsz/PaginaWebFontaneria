@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "María González",
+    "location": "San Francisco, Panamá",
+    "rating": 5,
+    "comment": "Excelente servicio. Llegaron rápido cuando tuve una emergencia con una tubería rota. Muy profesionales y el precio fue justo. ¡Los recomiendo!",
+    "service": "Reparación de fugas",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "name": "Carlos Rodríguez",
+    "location": "Punta Pacífica, Panamá",
+    "rating": 5,
+    "comment": "Contraté sus servicios para remodelar completamente mi baño. El resultado superó mis expectativas. Trabajo limpio y de calidad.",
+    "service": "Remodelación de baños",
+    "date": "2024-02-20"
+  },
+  {
+    "id": 3,
+    "name": "Ana Martínez",
+    "location": "Costa del Este, Panamá",
+    "rating": 5,
+    "comment": "Mi calentador dejó de funcionar y vinieron el mismo día. Lo repararon rápidamente y me dieron consejos de mantenimiento. Muy agradecida.",
+    "service": "Calentadores de agua",
+    "date": "2024-03-10"
+  },
+  {
+    "id": 4,
+    "name": "Roberto Sánchez",
+    "location": "El Cangrejo, Panamá",
+    "rating": 5,
+    "comment": "Tenía el drenaje de la cocina completamente tapado. Usaron una cámara para identificar el problema y lo solucionaron sin romper nada. Servicio de primera.",
+    "service": "Destape de cañerías",
+    "date": "2024-03-25"
+  },
+  {
+    "id": 5,
+    "name": "Patricia López",
+    "location": "Coco del Mar, Panamá",
+    "rating": 5,
+    "comment": "Instalaron toda la plomería de mi casa nueva. Trabajo impecable y cumplieron con el tiempo acordado. Muy profesionales.",
+    "service": "Instalación de tuberías",
+    "date": "2024-04-05"
+  },
+  {
+    "id": 6,
+    "name": "José Hernández",
+    "location": "Bella Vista, Panamá",
+    "rating": 5,
+    "comment": "Cambiaron toda la grifería de mi apartamento. Excelente atención al cliente y precios competitivos. Definitivamente volveré a contratarlos.",
+    "service": "Instalación de grifería",
+    "date": "2024-04-18"
+  }
+]

@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const stats = [
+  { number: "15+", label: "Años de Experiencia" },
+  { number: "2000+", label: "Clientes Satisfechos" },
+  { number: "5000+", label: "Proyectos Completados" },
+  { number: "24/7", label: "Servicio de Emergencia" }
+];
+
+const values = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>`,
+    title: "Garantía de Calidad",
+    description: "Todos nuestros trabajos están garantizados. Nos aseguramos de que cada proyecto cumpla con los más altos estándares."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>`,
+    title: "Puntualidad",
+    description: "Respetamos su tiempo. Llegamos a la hora acordada y completamos los trabajos en los plazos establecidos."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>`,
+    title: "Profesionalismo",
+    description: "Nuestro equipo está capacitado y certificado. Mantenemos un trato respetuoso y profesional en todo momento."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>`,
+    title: "Precios Transparentes",
+    description: "Sin sorpresas ni costos ocultos. Cotizamos antes de empezar y respetamos el presupuesto acordado."
+  }
+];
+
+const team = [
+  { name: "Carlos Mendoza", role: "Fundador y Director", years: "20 años de experiencia" },
+  { name: "Roberto García", role: "Jefe de Operaciones", years: "15 años de experiencia" },
+  { name: "Miguel Sánchez", role: "Técnico Senior", years: "12 años de experiencia" }
+];
+---
+
+<Layout title="Sobre Nosotros | Plomerías Panamá">
+  <Header />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Sobre Nosotros</h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+          Conozca la historia y los valores que nos han convertido en líderes de plomería en Panamá.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Image Placeholder -->
+          <div class="relative">
+            <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl aspect-square flex items-center justify-center">
+              <div class="text-center p-8">
+                <div class="w-32 h-32 bg-primary-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                  </svg>
+                </div>
+                <span class="text-primary-800 font-bold text-2xl">PLOMERÍAS PANAMÁ</span>
+                <p class="text-primary-600 mt-2">Desde 2009</p>
+              </div>
+            </div>
+            <!-- Decorative Element -->
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-500 rounded-2xl -z-10"></div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Nuestra Historia
+            </h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                <strong class="text-gray-900">Plomerías Panamá</strong> nació en 2009 con una visión clara: 
+                ofrecer servicios de plomería de la más alta calidad a los hogares y negocios panameños.
+              </p>
+              <p>
+                Lo que comenzó como un pequeño emprendimiento familiar, hoy se ha convertido en una de las 
+                empresas de plomería más reconocidas del país, gracias a nuestro compromiso inquebrantable 
+                con la excelencia y la satisfacción del cliente.
+              </p>
+              <p>
+                A lo largo de estos <strong class="text-gray-900">más de 15 años</strong>, hemos atendido 
+                a miles de clientes, desde pequeñas reparaciones hasta grandes proyectos de instalación. 
+                Cada trabajo nos ha enseñado algo nuevo y nos ha permitido perfeccionar nuestras técnicas.
+              </p>
+              <p>
+                Hoy contamos con un equipo de técnicos altamente capacitados, equipos de última generación 
+                y un compromiso renovado cada día por seguir siendo su mejor opción en servicios de plomería.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 bg-primary-800 text-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extrabold text-accent-400 mb-2">
+                {stat.number}
+              </div>
+              <div class="text-blue-100">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Mission -->
+          <div class="card border-l-4 border-primary-800">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Misión</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Brindar servicios de plomería de excelencia que superen las expectativas de nuestros clientes, 
+              utilizando técnicas modernas, materiales de primera calidad y un equipo humano comprometido 
+              con la satisfacción total del cliente.
+            </p>
+          </div>
+
+          <!-- Vision -->
+          <div class="card border-l-4 border-accent-500">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Visión</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Ser la empresa de plomería más reconocida y confiable de Panamá, destacándonos por nuestra 
+              innovación, profesionalismo y compromiso con el desarrollo sostenible, expandiendo nuestros 
+              servicios a todo el territorio nacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title">Nuestros Valores</h2>
+        <p class="section-subtitle">
+          Los principios que guían cada uno de nuestros trabajos y relaciones con los clientes.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {values.map((value) => (
+            <div class="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <Fragment set:html={value.icon} />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
+              <p class="text-gray-600 text-sm">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title">Nuestro Equipo</h2>
+        <p class="section-subtitle">
+          Profesionales comprometidos con brindarle el mejor servicio.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {team.map((member) => (
+            <div class="card text-center">
+              <div class="w-24 h-24 bg-primary-800 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-3xl font-bold">
+                {member.name.charAt(0)}
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+              <p class="text-primary-800 font-medium mb-2">{member.role}</p>
+              <p class="text-gray-500 text-sm">{member.years}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-800 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          ¿Listo para Trabajar con Nosotros?
+        </h2>
+        <p class="text-blue-100 mb-8 max-w-xl mx-auto">
+          Contáctenos hoy y descubra por qué somos la opción preferida de miles de panameños.
+        </p>
+        <a href="/contacto" class="btn-accent">
+          Contáctenos Ahora
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
